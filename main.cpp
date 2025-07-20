@@ -409,7 +409,7 @@ int main() {
 
     Scene scene(
         1440, 16.0f/9.0f,
-        Camera(path, 1, 10),//{400, -200, -800},{0, 0, 0}),
+        Camera({400, -200, -800},{0, 0, 0}),
         2,
         bodies,
         new Floor(true, -500, black_diffuse, black_diffuse, 100),
@@ -423,7 +423,7 @@ int main() {
     std::cout << "Setup Complete  -  " << timeConversionnMS(timer.reset()) << std::endl;
 
     const int maxIterations = 10;
-    constexpr bool multithreading = true;
+    constexpr bool multithreading = false;
 
     bool bloomActive = true;
     float falloff = 1.0f;
