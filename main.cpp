@@ -408,9 +408,9 @@ int main() {
 
 
     Scene scene(
-        1080, 16.0f/9.0f,
+        1440, 16.0f/9.0f,
         Camera({400, -200, -800},{0, 0, 0}),
-        2,
+        4,
         bodies,
         new Floor(true, -500, black_diffuse, black_diffuse, 100),
         new Sky(false, float3(-1, -1, 0.5).normalize(), {50, 50, 40}, {0,0,0}, {0,0,0}),
@@ -422,7 +422,7 @@ int main() {
     //if (!stats) deletePngs("animation");
     std::cout << "Setup Complete  -  " << timeConversionnMS(timer.reset()) << std::endl;
 
-    const int maxIterations = 10;
+    const int maxIterations = 100;
     constexpr bool multithreading = false;
 
     bool bloomActive = true;
